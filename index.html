@@ -77,6 +77,12 @@
       <a class="card" href="https://davidwise01.github.io/sapphic-telegraph/"><div class="nm">The Sapphic Telegraph</div><div class="one">a real, decodable Morse device in the metre's two durations — type, key it by hand, hear the lamp.</div><div class="tag">live Web Audio</div></a>
     </div>
 
+    <div class="grp">recovered in our lifetime · the ground it stood on</div>
+    <div class="grid">
+      <a class="card" href="https://davidwise01.github.io/the-recovered/"><div class="nm">The Recovered</div><div class="one">Sappho grew — 2004 &amp; 2014 papyri added whole poems. Scrub the years, watch her surface — and read the crime in one recovery.</div><div class="tag">live 2D canvas · NEW</div></a>
+      <a class="card" href="https://davidwise01.github.io/lesbos-map/"><div class="nm">The Island</div><div class="one">one island: Sappho, the lyre, the first biology, an 18-Myr petrified forest. A map — click the places.</div><div class="tag">live 2D canvas · NEW</div></a>
+    </div>
+
     <p class="prose" style="margin-top:22px">The through-line the whole domain keeps circling: Sappho is a study in <b>measuring what will not hold still</b> — a voice of total presence that reaches us as mostly <span class="m">absence</span>, and is somehow larger for it. The music is real data with an honest synthetic voice; the codes are real codes with an honest anachronism; the colour is real chemistry with an honest cost. Nothing here pretends the losses away — it renders them faithfully, which is the only way the presence still lands.</p>
   </section>
 
@@ -93,16 +99,18 @@
   var G={poet:"#d9a441", loss:"#c2557f", place:"#73b3a3", material:"#c98a5a", music:"#73b3a3", trans:"#c2557f"};
   // nodes placed around the lyre centre
   var N=[
-    {s:"sappho",             l:"Sappho",              g:"poet",     x:.50,y:.20},
-    {s:"the-fragments",      l:"The Fragments",       g:"loss",     x:.24,y:.34},
-    {s:"purple-paper-lesbos",l:"Purple Paper",        g:"place",    x:.16,y:.62},
-    {s:"the-murex",          l:"The Murex",           g:"material", x:.34,y:.82},
-    {s:"sounds-of-lesbos",   l:"Sounds of Lesbos",    g:"music",    x:.66,y:.82},
-    {s:"the-sapphic-melody", l:"The Sapphic Melody",  g:"music",    x:.84,y:.62},
-    {s:"sapphos-limen",      l:"Sappho's LIMEN",      g:"trans",    x:.76,y:.34},
-    {s:"sapphic-telegraph",  l:"The Sapphic Telegraph",g:"trans",   x:.60,y:.50}
+    {s:"sappho",             l:"Sappho",               g:"poet",     x:.50,y:.14}, //0
+    {s:"the-recovered",      l:"The Recovered",        g:"loss",     x:.70,y:.20}, //1
+    {s:"sapphos-limen",      l:"Sappho's LIMEN",       g:"trans",    x:.85,y:.34}, //2
+    {s:"the-sapphic-melody", l:"The Sapphic Melody",   g:"music",    x:.87,y:.56}, //3
+    {s:"sounds-of-lesbos",   l:"Sounds of Lesbos",     g:"music",    x:.74,y:.80}, //4
+    {s:"sapphic-telegraph",  l:"The Sapphic Telegraph",g:"trans",    x:.52,y:.88}, //5
+    {s:"the-murex",          l:"The Murex",            g:"material", x:.30,y:.80}, //6
+    {s:"lesbos-map",         l:"The Island",           g:"place",    x:.13,y:.58}, //7
+    {s:"purple-paper-lesbos",l:"Purple Paper",         g:"place",    x:.13,y:.34}, //8
+    {s:"the-fragments",      l:"The Fragments",        g:"loss",     x:.30,y:.20}  //9
   ];
-  var E=[[0,1],[0,3],[1,2],[2,3],[4,5],[5,6],[6,7],[7,4],[0,6],[1,7]]; // shared threads
+  var E=[[0,9],[0,1],[9,1],[9,6],[8,7],[7,6],[7,4],[4,3],[3,2],[2,5],[5,4],[8,9]]; // shared threads
   function px(n){ return n.x*W; } function py(n){ return n.y*H; }
 
   function draw(){
